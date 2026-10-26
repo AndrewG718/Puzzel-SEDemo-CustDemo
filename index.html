@@ -70,8 +70,20 @@
     letter-spacing:.3px;
   }
   .nav-links a{ color:#0a0a0a; }
-  .nav-right{ font-size:13px; font-weight:700; }
+  .nav-right{ font-size:13px; font-weight:700; display:flex; align-items:center; gap:16px; }
   .nav-right a{ color:var(--blue); }
+  .btn-edit-booking{
+    background:var(--navy-text);
+    color:#fff;
+    font-weight:700;
+    font-size:12.5px;
+    padding:9px 16px;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .btn-edit-booking:hover{ background:var(--navy-deep); }
 
   /* ---- Hero ---- */
   .hero{
@@ -99,14 +111,34 @@
   .hero .sub{ font-size:16px; font-weight:700; margin-bottom:8px; }
   .hero p{ max-width:520px; font-size:15px; color:#cfd6e8; line-height:1.6; }
 
+  .hero-cards-row{
+    display:flex;
+    gap:16px;
+    margin-top:28px;
+    flex-wrap:wrap;
+    align-items:stretch;
+  }
   .location-card{
     background:#fff;
     color:#1a1a1a;
     border-radius:10px;
     padding:20px;
     max-width:420px;
-    margin-top:28px;
+    flex:1 1 320px;
   }
+  .edit-booking-card{
+    background:#fff;
+    color:#1a1a1a;
+    border-radius:10px;
+    padding:20px;
+    max-width:280px;
+    flex:1 1 220px;
+    display:flex;
+    flex-direction:column;
+  }
+  .edit-booking-card label{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; }
+  .edit-booking-card p{ font-size:12.5px; color:#555; line-height:1.5; margin:8px 0 14px; flex:1; }
+  .edit-booking-card .btn-edit-booking{ width:100%; padding:11px; }
   .location-card label{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; }
   .location-card select{
     width:100%; padding:10px; margin:8px 0 14px;
@@ -258,8 +290,23 @@
     <a href="#">EXPERIENCES</a>
     <a href="#">MEMBERSHIP</a>
   </div>
-  <div class="nav-right">CALL US <a href="tel:01252732300">01252 732300</a> OR <a href="#">CONTACT US</a></div>
+  <div class="nav-right">
+    <span>CALL US <a href="tel:01252732300">01252 732300</a> OR <a href="#">CONTACT US</a></span>
+  </div>
 </nav>
+
+<div id="editBookingModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:50; align-items:center; justify-content:center;">
+  <div style="background:#fff; border-radius:12px; max-width:420px; width:90%; padding:28px; position:relative;">
+    <button id="closeEditBookingBtn" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:18px; cursor:pointer; color:#888;">✕</button>
+    <h3 style="margin:0 0 6px; color:#13224b; font-size:19px;">Edit Your Booking</h3>
+    <p style="margin:0 0 18px; font-size:13.5px; color:#555;">Enter your booking reference and email to find and amend your booking.</p>
+    <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; margin-bottom:4px;">Booking reference</label>
+    <input type="text" placeholder="e.g. TS-FNB-48213" style="width:100%; padding:10px; margin-bottom:14px; border:1px solid #e2e5ea; border-radius:6px; font-size:14px;">
+    <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; margin-bottom:4px;">Email address</label>
+    <input type="email" placeholder="you@example.com" style="width:100%; padding:10px; margin-bottom:20px; border:1px solid #e2e5ea; border-radius:6px; font-size:14px;">
+    <button style="width:100%; background:#e6186b; color:#fff; border:none; padding:12px; border-radius:6px; font-weight:700; font-size:14px; cursor:pointer;">Find My Booking</button>
+  </div>
+</div>
 
 <section class="hero">
   <div class="hero-inner">
@@ -268,6 +315,7 @@
     <div class="sub">UK'S #1 FOR INDOOR GO KARTING</div>
     <p>High-speed action, state-of-the-art tracks and unforgettable experiences for everyone. Race, compete and create lasting memories.</p>
 
+    <div class="hero-cards-row">
     <div class="location-card">
       <label>Choose your location</label>
       <select>
@@ -294,6 +342,13 @@
         <optgroup label="Wales"><option>Cardiff</option></optgroup>
       </select>
       <button class="btn-book">Book Now ›</button>
+    </div>
+
+    <div class="edit-booking-card">
+      <label>Already booked?</label>
+      <p>Look up an existing booking to amend the drivers, date or details.</p>
+      <button class="btn-edit-booking" id="editBookingBtn">EDIT BOOKING</button>
+    </div>
     </div>
 
     <div class="feature-strip">
@@ -494,6 +549,15 @@
     TeamSport is a trading name of Go Karting For Fun Ltd. Registered in England No. 05030696.
   </div>
 </footer>
+
+<script>
+  const editBookingBtn = document.getElementById('editBookingBtn');
+  const editBookingModal = document.getElementById('editBookingModal');
+  const closeEditBookingBtn = document.getElementById('closeEditBookingBtn');
+  editBookingBtn.addEventListener('click', () => { editBookingModal.style.display = 'flex'; });
+  closeEditBookingBtn.addEventListener('click', () => { editBookingModal.style.display = 'none'; });
+  editBookingModal.addEventListener('click', (e) => { if (e.target === editBookingModal) editBookingModal.style.display = 'none'; });
+</script>
 
 </body>
 </html>

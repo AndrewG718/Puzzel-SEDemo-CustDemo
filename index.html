@@ -3,28 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Go Karting at TeamSport | #1 For Indoor Karting Nationwide</title>
+<title>TOAST | Womenswear, Menswear and Functional Homeware</title>
 <style>
   :root{
     --black:#111111;
-    --navy:#0b1230;
-    --navy-deep:#0f1b3f;
-    --navy-text:#13224b;
-    --orange:#f5a623;
-    --pink:#e6186b;
-    --blue:#2d8eff;
-    --teal:#19b3a6;
-    --border:#e2e5ea;
-    --grey-bg:#f4f6f9;
+    --ink:#1a1a1a;
+    --cream:#f6f3ee;
+    --line:#d9d4ca;
+    --muted:#6b6459;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    font-family:'Helvetica Neue', Arial, sans-serif;
-    color:#1a1a1a;
+    font-family:'Georgia', 'Times New Roman', serif;
+    color:var(--ink);
     background:#fff;
   }
-  a{ text-decoration:none; }
+  a{ text-decoration:none; color:inherit; }
   .demo-flag{
     background:#fff3cd;
     border-bottom:1px solid #e6c860;
@@ -32,532 +27,435 @@
     font-size:12.5px;
     text-align:center;
     padding:8px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
   }
-  .utility-bar{
+  .promo-bar{
     background:var(--black);
     color:#fff;
-    font-size:12px;
-    font-weight:600;
-    display:flex;
-    gap:28px;
-    padding:9px 24px;
-    letter-spacing:.3px;
-    overflow-x:auto;
-    white-space:nowrap;
+    text-align:center;
+    font-size:11.5px;
+    letter-spacing:.6px;
+    padding:9px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
   }
-  .utility-bar span{ opacity:.9; }
+
   nav.main-nav{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:14px 24px;
-    border-bottom:1px solid var(--border);
-    flex-wrap:wrap;
-    gap:12px;
+    padding:22px 32px;
+    border-bottom:1px solid var(--line);
   }
   .wordmark{
-    font-style:italic;
-    font-weight:800;
-    font-size:24px;
-    letter-spacing:-0.5px;
-    color:#0a0a0a;
+    font-size:26px;
+    letter-spacing:6px;
+    font-weight:400;
   }
   .nav-links{
     display:flex;
-    gap:28px;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:.3px;
-  }
-  .nav-links a{ color:#0a0a0a; }
-  .nav-right{ font-size:13px; font-weight:700; display:flex; align-items:center; gap:16px; }
-  .nav-right a{ color:var(--blue); }
-  .btn-edit-booking{
-    background:var(--navy-text);
-    color:#fff;
-    font-weight:700;
+    gap:30px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
     font-size:12.5px;
-    padding:9px 16px;
-    border-radius:6px;
-    border:none;
-    cursor:pointer;
-    white-space:nowrap;
-  }
-  .btn-edit-booking:hover{ background:var(--navy-deep); }
-
-  /* ---- Hero ---- */
-  .hero{
-    background:linear-gradient(120deg, var(--navy) 0%, var(--navy-deep) 100%);
-    color:#fff;
-    padding:64px 24px 48px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero-inner{ max-width:1150px; margin:0 auto; }
-  .hero h1{
-    font-size:42px;
-    font-weight:800;
-    line-height:1.15;
-    margin:0 0 6px;
+    letter-spacing:.5px;
     text-transform:uppercase;
-    max-width:620px;
   }
-  .hero h1 .accent{ color:var(--orange); }
-  .hero .underline{
-    width:90px; height:4px;
-    background:linear-gradient(90deg, var(--pink), var(--orange));
-    margin:18px 0;
+  .nav-right{
+    display:flex;
+    gap:22px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:12px;
+    letter-spacing:.3px;
+    text-transform:uppercase;
   }
-  .hero .sub{ font-size:16px; font-weight:700; margin-bottom:8px; }
-  .hero p{ max-width:520px; font-size:15px; color:#cfd6e8; line-height:1.6; }
 
-  .hero-cards-row{
+  .hero{
+    position:relative;
+    background:linear-gradient(160deg, #2b2a26, #0d0d0c);
+    min-height:460px;
     display:flex;
-    gap:16px;
-    margin-top:28px;
-    flex-wrap:wrap;
-    align-items:stretch;
-  }
-  .location-card{
-    background:#fff;
-    color:#1a1a1a;
-    border-radius:10px;
-    padding:20px;
-    max-width:420px;
-    flex:1 1 320px;
-  }
-  .edit-booking-card{
-    background:#fff;
-    color:#1a1a1a;
-    border-radius:10px;
-    padding:20px;
-    max-width:280px;
-    flex:1 1 220px;
-    display:flex;
-    flex-direction:column;
-  }
-  .edit-booking-card label{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; }
-  .edit-booking-card p{ font-size:12.5px; color:#555; line-height:1.5; margin:8px 0 14px; flex:1; }
-  .edit-booking-card .btn-edit-booking{ width:100%; padding:11px; }
-  .location-card label{ font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; }
-  .location-card select{
-    width:100%; padding:10px; margin:8px 0 14px;
-    border:1px solid var(--border); border-radius:6px; font-size:14px;
-  }
-  .btn-book{
-    display:inline-block;
-    background:var(--pink);
+    align-items:flex-end;
+    padding:48px;
     color:#fff;
-    font-weight:700;
-    font-size:13px;
-    padding:12px 22px;
-    border-radius:6px;
-    border:none;
-    cursor:pointer;
+  }
+  .hero .hero-copy{ max-width:460px; }
+  .hero h1{
+    font-size:34px;
+    font-weight:400;
+    margin:0 0 14px;
+    letter-spacing:.5px;
+  }
+  .hero p{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:14px;
+    line-height:1.6;
+    color:#e8e4da;
+    margin:0 0 22px;
+  }
+  .hero-ctas{ display:flex; gap:16px; font-family:'Helvetica Neue', Arial, sans-serif; }
+  .hero-ctas a{
+    border:1px solid #fff;
+    padding:11px 22px;
+    font-size:11.5px;
+    letter-spacing:.8px;
+    text-transform:uppercase;
   }
 
-  .feature-strip{
+  .quick-links{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:0;
-    background:var(--navy-deep);
-    border-radius:10px;
-    padding:20px;
-    margin-top:32px;
-    max-width:1100px;
+    border-bottom:1px solid var(--line);
   }
-  .feature{ display:flex; align-items:center; gap:12px; padding:14px; color:#fff; }
-  .feature .dot{
-    width:40px;height:40px;border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    font-size:18px;flex-shrink:0;color:#fff;
+  .quick-links a{
+    padding:16px;
+    text-align:center;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:12px;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    border-right:1px solid var(--line);
   }
-  .feature:nth-child(1) .dot{ background:var(--teal); }
-  .feature:nth-child(2) .dot{ background:var(--blue); }
-  .feature:nth-child(3) .dot{ background:var(--orange); }
-  .feature:nth-child(4) .dot{ background:var(--pink); }
-  .feature .ftitle{ font-weight:700; font-size:13px; }
-  .feature .fsub{ font-size:11px; color:#aeb8d0; }
+  .quick-links a:last-child{ border-right:none; }
 
-  /* ---- generic section ---- */
-  section.block{ max-width:1150px; margin:0 auto; padding:56px 24px; }
-  .eyebrow{ color:var(--pink); font-weight:800; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
-  h2.section-title{ color:var(--navy-text); font-size:30px; margin:0 0 14px; }
-  p.section-copy{ color:#444; font-size:15px; line-height:1.7; max-width:640px; }
-  .link-arrow{ color:var(--blue); font-weight:700; font-size:14px; }
-
-  .split{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-  .img-block{
-    border-radius:12px;
-    min-height:260px;
-    background:repeating-linear-gradient(135deg, var(--navy) 0 18px, var(--navy-deep) 18px 36px);
-    display:flex; align-items:flex-end; padding:18px; color:#fff; font-weight:700; font-size:13px;
+  .category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2px;
   }
-  .img-block.alt{ background:repeating-linear-gradient(135deg, #1b1b1b 0 18px, #2b2b2b 18px 36px); }
+  .category-card{
+    position:relative;
+    min-height:340px;
+    background:repeating-linear-gradient(135deg, #e5ded0 0 24px, #d8cfbd 24px 48px);
+    display:flex;
+    align-items:flex-end;
+    padding:24px;
+  }
+  .category-card .cname{
+    font-size:18px;
+    background:#fff;
+    padding:8px 16px;
+  }
 
-  .half-term{
-    background:linear-gradient(120deg, var(--orange), #e07a00);
-    border-radius:12px;
-    padding:28px 32px;
+  section.editorial{
+    text-align:center;
+    padding:64px 32px;
+  }
+  .eyebrow{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:10px;
+  }
+  section.editorial h2{
+    font-size:28px;
+    font-weight:400;
+    margin:0 0 16px;
+  }
+  section.editorial p{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:14px;
+    line-height:1.7;
+    max-width:560px;
+    margin:0 auto;
+    color:#333;
+  }
+
+  .festive-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:2px;
+    margin-top:36px;
+  }
+  .festive-card{
+    min-height:380px;
+    background:repeating-linear-gradient(120deg, #1f1d1a 0 20px, #312d27 20px 40px);
+    display:flex;
+    align-items:flex-end;
+    padding:18px;
     color:#fff;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:13px;
+  }
+
+  .promo-band{
+    background:var(--cream);
+    padding:48px 32px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
-    gap:16px;
-    margin:0 24px;
-    max-width:1100px;
+    gap:24px;
+  }
+  .promo-band h3{ font-size:22px; font-weight:400; margin:0 0 6px; }
+  .promo-band p{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:13px;
+    color:#444;
+    max-width:420px;
+    margin:0;
+  }
+  .promo-band a{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:11.5px;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    border-bottom:1px solid var(--ink);
+    padding-bottom:3px;
+  }
+
+  .magazine{ padding:56px 32px; }
+  .magazine-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:28px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+  }
+  .magazine-head h2{ font-family:Georgia, serif; font-size:24px; font-weight:400; margin:0; }
+  .magazine-head a{ font-size:11.5px; letter-spacing:.6px; text-transform:uppercase; }
+  .magazine-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  .mag-card .thumb{
+    height:180px;
+    background:repeating-linear-gradient(135deg, #ece6d9 0 18px, #e1d9c7 18px 36px);
+    margin-bottom:14px;
+  }
+  .mag-card .tag{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:10.5px;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:6px;
+  }
+  .mag-card h4{ font-size:16px; font-weight:400; margin:0 0 6px; line-height:1.4; }
+  .mag-card .date{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    font-size:11.5px;
+    color:var(--muted);
+  }
+
+  footer{
+    background:#fff;
+    border-top:1px solid var(--line);
+    padding:48px 32px 24px;
+    font-family:'Helvetica Neue', Arial, sans-serif;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    margin-bottom:36px;
+  }
+  .footer-grid h5{
+    font-size:11.5px;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    margin:0 0 14px;
+  }
+  .footer-grid ul{ list-style:none; padding:0; margin:0; }
+  .footer-grid li{ margin-bottom:9px; font-size:13px; color:#333; }
+  .newsletter{
+    border-top:1px solid var(--line);
+    padding-top:28px;
+    text-align:center;
+  }
+  .newsletter h5{ font-size:13px; letter-spacing:.4px; margin:0 0 6px; }
+  .newsletter p{ font-size:12.5px; color:var(--muted); margin:0 0 16px; }
+  .newsletter-form{
+    display:flex;
+    justify-content:center;
+    gap:0;
+    max-width:380px;
     margin:0 auto;
   }
-  .half-term h3{ margin:0 0 4px; font-size:22px; }
-  .half-term .btn-dark{ background:#111; color:#fff; padding:10px 20px; border-radius:6px; font-weight:700; font-size:13px; }
-
-  .exp-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:28px; }
-  .exp-card{ border-radius:12px; overflow:hidden; border:1px solid var(--border); }
-  .exp-card .thumb{ height:150px; display:flex; align-items:flex-end; padding:14px; color:#fff; font-weight:800; font-size:13px; text-transform:uppercase; letter-spacing:.5px; }
-  .exp-card:nth-child(1) .thumb{ background:linear-gradient(120deg,var(--navy),var(--navy-deep)); }
-  .exp-card:nth-child(2) .thumb{ background:linear-gradient(120deg,var(--teal),#0f7d73); }
-  .exp-card:nth-child(3) .thumb{ background:linear-gradient(120deg,var(--pink),#ad0f4e); }
-  .exp-card .body{ padding:18px; }
-  .exp-card h4{ margin:0 0 8px; font-size:17px; color:var(--navy-text); }
-  .exp-card p{ font-size:13.5px; color:#555; line-height:1.55; margin:0 0 12px; }
-
-  .offer-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:28px; }
-  .offer-card{ border:1px solid var(--border); border-radius:12px; padding:20px; }
-  .offer-card h4{ margin:0 0 10px; font-size:16px; color:var(--navy-text); }
-  .offer-card ul{ padding-left:18px; margin:0 0 16px; font-size:13.5px; color:#444; line-height:1.7; }
-  .offer-card .btn-small{ display:inline-block; background:var(--navy-text); color:#fff; font-size:12.5px; font-weight:700; padding:8px 16px; border-radius:6px; }
-
-  .member-strip{
-    background:var(--grey-bg);
-    border-radius:12px;
-    padding:36px;
-    margin-top:28px;
+  .newsletter-form input{
+    flex:1;
+    padding:11px 14px;
+    border:1px solid var(--ink);
+    border-right:none;
+    font-size:13px;
+    font-family:inherit;
   }
-  .member-cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:20px; }
-  .member-cols h4{ color:var(--navy-text); font-size:15px; margin:0 0 8px; }
-  .member-cols p{ font-size:13.5px; color:#555; line-height:1.6; margin:0 0 10px; }
-
-  .discover-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:24px; }
-  .discover-card{ border:1px solid var(--border); border-radius:10px; padding:16px; }
-  .discover-card .dname{ font-weight:700; font-size:14px; color:var(--navy-text); margin-bottom:4px; }
-  .discover-card .dlink{ font-size:12.5px; color:var(--blue); font-weight:700; }
-
-  footer{ background:var(--black); color:#cfd6e8; margin-top:40px; }
-  .footer-grid{
-    max-width:1150px; margin:0 auto; padding:48px 24px 24px;
-    display:grid; grid-template-columns:repeat(4,1fr); gap:28px;
-  }
-  .footer-grid h5{ color:#fff; font-size:13px; text-transform:uppercase; letter-spacing:.4px; margin:0 0 14px; }
-  .footer-grid ul{ list-style:none; padding:0; margin:0; }
-  .footer-grid li{ margin-bottom:9px; }
-  .footer-grid a{ color:#aeb8d0; font-size:13px; }
-  .footer-bottom{
-    border-top:1px solid #2a2a2a;
-    padding:18px 24px;
-    text-align:center;
+  .newsletter-form button{
+    background:var(--ink);
+    color:#fff;
+    border:1px solid var(--ink);
+    padding:11px 20px;
     font-size:11.5px;
-    color:#777;
-    line-height:1.7;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    cursor:pointer;
+  }
+  .footer-bottom{
+    text-align:center;
+    margin-top:28px;
+    font-size:11px;
+    color:var(--muted);
   }
 
   @media (max-width:900px){
-    .feature-strip, .exp-grid, .offer-grid, .member-cols, .discover-grid, .footer-grid{ grid-template-columns:1fr; }
-    .split{ grid-template-columns:1fr; }
-    .hero h1{ font-size:32px; }
+    .category-grid, .festive-grid, .magazine-grid, .footer-grid{ grid-template-columns:1fr; }
+    .quick-links{ grid-template-columns:1fr; }
+    .nav-links{ display:none; }
   }
 </style>
 </head>
 <body>
 
-<div class="demo-flag">Internal Puzzel demo — content adapted from team-sport.co.uk to illustrate page structure/branding only. Not the live TeamSport website.</div>
+<div class="demo-flag">Internal Puzzel demo — content adapted from toa.st to illustrate page structure/branding only. Not the live TOAST website.</div>
 
-<div class="utility-bar">
-  <span>🎄 CHRISTMAS PARTIES</span>
-  <span>🏆 BIKC</span>
-  <span>🏁 FASTTRACK</span>
-  <span>FOOD</span>
-  <span>CORPORATE</span>
-  <span>FAQS</span>
-  <span>GIFT VOUCHERS</span>
-  <span>NEWSLETTER</span>
-</div>
+<div class="promo-bar">FREE UK DELIVERY ON FULL PRICE ORDERS OVER £150 · FREE UK RETURNS</div>
 
 <nav class="main-nav">
-  <div class="wordmark">TeamSport</div>
   <div class="nav-links">
-    <a href="#">LOCATIONS</a>
-    <a href="#">EXPERIENCES</a>
-    <a href="#">MEMBERSHIP</a>
+    <a href="#">New In</a>
+    <a href="#">Clothing</a>
+    <a href="#">Knitwear</a>
+    <a href="#">Dresses</a>
+    <a href="#">Coats &amp; Jackets</a>
+    <a href="#">Accessories</a>
   </div>
+  <div class="wordmark">TOAST</div>
   <div class="nav-right">
-    <span>CALL US <a href="tel:01252732300">01252 732300</a> OR <a href="#">CONTACT US</a></span>
+    <a href="#">Search</a>
+    <a href="#">Account</a>
+    <a href="#">Bag (0)</a>
   </div>
 </nav>
 
-<div id="editBookingModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:50; align-items:center; justify-content:center;">
-  <div style="background:#fff; border-radius:12px; max-width:420px; width:90%; padding:28px; position:relative;">
-    <button id="closeEditBookingBtn" style="position:absolute; top:14px; right:14px; background:none; border:none; font-size:18px; cursor:pointer; color:#888;">✕</button>
-    <h3 style="margin:0 0 6px; color:#13224b; font-size:19px;">Edit Your Booking</h3>
-    <p style="margin:0 0 18px; font-size:13.5px; color:#555;">Enter your booking reference and email to find and amend your booking.</p>
-    <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; margin-bottom:4px;">Booking reference</label>
-    <input type="text" placeholder="e.g. TS-FNB-48213" style="width:100%; padding:10px; margin-bottom:14px; border:1px solid #e2e5ea; border-radius:6px; font-size:14px;">
-    <label style="display:block; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; color:#666; margin-bottom:4px;">Email address</label>
-    <input type="email" placeholder="you@example.com" style="width:100%; padding:10px; margin-bottom:20px; border:1px solid #e2e5ea; border-radius:6px; font-size:14px;">
-    <button style="width:100%; background:#e6186b; color:#fff; border:none; padding:12px; border-radius:6px; font-weight:700; font-size:14px; cursor:pointer;">Find My Booking</button>
-  </div>
-</div>
-
 <section class="hero">
-  <div class="hero-inner">
-    <h1>THE <span class="accent">ULTIMATE</span><br>INDOOR KARTING<br>EXPERIENCE</h1>
-    <div class="underline"></div>
-    <div class="sub">UK'S #1 FOR INDOOR GO KARTING</div>
-    <p>High-speed action, state-of-the-art tracks and unforgettable experiences for everyone. Race, compete and create lasting memories.</p>
-
-    <div class="hero-cards-row">
-    <div class="location-card">
-      <label>Choose your location</label>
-      <select>
-        <option>Select a location</option>
-        <optgroup label="North">
-          <option>Bradford</option><option>Hull</option><option>Leeds</option><option>Liverpool</option>
-          <option>Manchester Trafford</option><option>Manchester Victoria</option><option>Newcastle</option>
-          <option>Preston</option><option>Sheffield</option><option>Stockton</option><option>Stoke</option><option>Warrington</option>
-        </optgroup>
-        <optgroup label="Midlands">
-          <option>Birmingham</option><option>Coventry</option><option>Leicester</option><option>Nottingham</option>
-        </optgroup>
-        <optgroup label="London">
-          <option>Acton</option><option>Brent Cross</option><option>Docklands</option><option>Edmonton</option><option>Mitcham</option><option>Watford</option>
-        </optgroup>
-        <optgroup label="South">
-          <option>Basildon</option><option>Bournemouth</option><option>Brighton</option><option>Bristol</option>
-          <option>Crawley</option><option>Dunstable</option><option>Farnborough</option><option>Gosport</option>
-          <option>Harlow</option><option>High Wycombe</option><option>Reading</option><option>Southampton</option>
-        </optgroup>
-        <optgroup label="Scotland">
-          <option>Dundee</option><option>Glasgow Cambuslang</option><option>Glasgow Clydebank</option>
-        </optgroup>
-        <optgroup label="Wales"><option>Cardiff</option></optgroup>
-      </select>
-      <button class="btn-book">Book Now ›</button>
-    </div>
-
-    <div class="edit-booking-card">
-      <label>Already booked?</label>
-      <p>Look up an existing booking to amend the drivers, date or details.</p>
-      <button class="btn-edit-booking" id="editBookingBtn">EDIT BOOKING</button>
-    </div>
-    </div>
-
-    <div class="feature-strip">
-      <div class="feature"><div class="dot">📍</div><div><div class="ftitle">38 Tracks Nationwide</div><div class="fsub">UK's largest indoor karting company</div></div></div>
-      <div class="feature"><div class="dot">⭐</div><div><div class="ftitle">4.5/5 Average Review</div><div class="fsub">50,000+ reviews every year</div></div></div>
-      <div class="feature"><div class="dot">🎉</div><div><div class="ftitle">Perfect For Parties</div><div class="fsub">Birthdays | Corporate | Stag &amp; Hen</div></div></div>
-      <div class="feature"><div class="dot">🏁</div><div><div class="ftitle">Race Like A Pro</div><div class="fsub">State-of-the-art tracks</div></div></div>
+  <div class="hero-copy">
+    <h1>The Winter Wardrobe Edit</h1>
+    <p>Considered womenswear in cashmere, wool and cord — new season knitwear, dresses and outerwear made to last.</p>
+    <div class="hero-ctas">
+      <a href="#">Shop Women's New In</a>
+      <a href="#">Shop Knitwear</a>
     </div>
   </div>
 </section>
 
-<section class="block">
-  <div class="split">
-    <div class="img-block">Nationwide Go-Karting</div>
-    <div>
-      <h2 class="section-title">38 tracks across the UK</h2>
-      <p class="section-copy">TeamSport is the UK's largest indoor karting company. Our venues are built for fast, high-energy karting and are a popular choice for family days out, kids' birthday parties, adult groups, corporate events, stag and hen dos, and larger celebrations.</p>
-      <p class="section-copy">With six tracks in London alone and venues from Cardiff to Dundee, there's a TeamSport track close to wherever you are in the UK.</p>
-      <a class="link-arrow" href="#">FIND A TRACK NEAR YOU ›</a>
-    </div>
-  </div>
-</section>
-
-<section class="block" style="padding-top:0;">
-  <div class="img-block alt" style="min-height:220px; align-items:center; justify-content:center; font-size:16px;">▶ TeamSport Experiences — watch the video</div>
-  <p class="section-copy" style="margin:18px auto 0; text-align:center; max-width:700px;">Whether you're chasing your fastest lap, celebrating with friends, or planning a day out, TeamSport delivers thrilling indoor karting for drivers aged 8 and over — plus off-track activities including laser tag, bowling and mini golf.</p>
-</section>
-
-<div class="half-term">
-  <div>
-    <div style="font-size:12px;font-weight:800;letter-spacing:.5px;">HALF-TERM THRILLS</div>
-    <h3>October Half-Term — Book Now</h3>
-  </div>
-  <a class="btn-dark" href="#">Book Now →</a>
+<div class="quick-links">
+  <a href="#">New In</a>
+  <a href="#">Dresses</a>
+  <a href="#">Knitwear</a>
+  <a href="#">Coats &amp; Jackets</a>
 </div>
 
-<section class="block">
-  <div class="eyebrow">TeamSport Experiences</div>
-  <h2 class="section-title">Race, play and celebrate</h2>
-  <div class="exp-grid">
-    <div class="exp-card">
-      <div class="thumb">Race</div>
-      <div class="body">
-        <h4>Go-Karting</h4>
-        <p>Race wheel-to-wheel with friends, family or colleagues on multi-level tracks built for speed and competition.</p>
-        <a class="link-arrow" href="#">Explore Go-Karting ›</a>
-      </div>
-    </div>
-    <div class="exp-card">
-      <div class="thumb">Play</div>
-      <div class="body">
-        <h4>Off-Track Experiences</h4>
-        <p>At selected venues, extend the day with laser combat, bowling and mini golf — great for groups and parties.</p>
-        <a class="link-arrow" href="#">Explore Off-Track Experiences ›</a>
-      </div>
-    </div>
-    <div class="exp-card">
-      <div class="thumb">Celebrate</div>
-      <div class="body">
-        <h4>Parties &amp; Events</h4>
-        <p>From corporate events to birthdays, stag and hen dos — karting and off-track activities make any occasion memorable.</p>
-        <a class="link-arrow" href="#">Explore Parties &amp; Events ›</a>
-      </div>
-    </div>
-  </div>
+<div class="category-grid">
+  <div class="category-card"><span class="cname">Dresses</span></div>
+  <div class="category-card"><span class="cname">Knitwear</span></div>
+  <div class="category-card"><span class="cname">Coats &amp; Jackets</span></div>
+  <div class="category-card"><span class="cname">Trousers</span></div>
+</div>
 
-  <div class="offer-grid">
-    <div class="offer-card">
-      <h4>Ultimate Race Experience</h4>
-      <ul>
-        <li>8 years and over</li>
-        <li>2 sessions on the Main track</li>
-        <li>Fastest Lap wins, Pit Lane start</li>
-      </ul>
-      <a class="btn-small" href="#">Book now</a>
-    </div>
-    <div class="offer-card">
-      <h4>Grand Prix</h4>
-      <ul>
-        <li>A true motorsport format</li>
-        <li>Qualifying session + Grid Start race</li>
-        <li>Podium presentation</li>
-      </ul>
-      <a class="btn-small" href="#">Book now</a>
-    </div>
-    <div class="offer-card">
-      <h4>Special Occasions</h4>
-      <ul>
-        <li>Corporate parties</li>
-        <li>Stag &amp; hen dos</li>
-        <li>Birthday &amp; large group bookings</li>
-      </ul>
-      <a class="btn-small" href="#">Parties and Events</a>
-    </div>
+<section class="editorial">
+  <div class="eyebrow">Seasonal Concept</div>
+  <h2>Marking the Turn — an edit of considered dressing for the colder months</h2>
+  <p>Layered knitwear, fluid dresses and outerwear cut for movement — pieces built around texture, not trend.</p>
+
+  <div class="festive-grid">
+    <div class="festive-card">Cashmere Knitwear</div>
+    <div class="festive-card">Wool Coats</div>
+    <div class="festive-card">Evening Dresses</div>
   </div>
 </section>
 
-<section class="block">
-  <div class="member-strip">
-    <div class="eyebrow">For Members</div>
-    <h2 class="section-title" style="margin-bottom:6px;">Take your racing further</h2>
-    <p class="section-copy">TeamSport Membership unlocks regular racing, exclusive benefits and competitive championships — including BIKC, the world's largest indoor karting championship.</p>
-    <div class="member-cols">
-      <div>
-        <h4>Membership</h4>
-        <p>Unlock member benefits, exclusive offers and more opportunities to get back on track.</p>
-        <a class="link-arrow" href="#">Discover Membership ›</a>
-      </div>
-      <div>
-        <h4>Championships</h4>
-        <p>From local championships like GRID Series to BIKC, take your racing to the next level.</p>
-        <a class="link-arrow" href="#">Explore Championships ›</a>
-      </div>
-      <div>
-        <h4>Go Karting Lessons</h4>
-        <p>Race Academy coaching for ages 8–15, plus the Girls Karting Academy with exclusive club nights.</p>
-        <a class="link-arrow" href="#">Find Out More ›</a>
-      </div>
-    </div>
+<div class="promo-band">
+  <div>
+    <h3>New Season Dresses</h3>
+    <p>From fluid jersey to tailored shirt dresses — discover the new arrivals shaping this season's silhouette.</p>
   </div>
-</section>
+  <a href="#">Shop Dresses</a>
+</div>
 
-<section class="block">
-  <h2 class="section-title">Discover More</h2>
-  <div class="discover-grid">
-    <div class="discover-card"><div class="dname">Gift Vouchers</div><a class="dlink" href="#">Find Out More →</a></div>
-    <div class="discover-card"><div class="dname">Go Karting</div><a class="dlink" href="#">Find Out More →</a></div>
-    <div class="discover-card"><div class="dname">FAQs</div><a class="dlink" href="#">Find Out More →</a></div>
-    <div class="discover-card"><div class="dname">Corporate Events</div><a class="dlink" href="#">Find Out More →</a></div>
-    <div class="discover-card"><div class="dname">Food &amp; Drink</div><a class="dlink" href="#">Find Out More →</a></div>
-    <div class="discover-card"><div class="dname">Membership</div><a class="dlink" href="#">Find Out More →</a></div>
+<section class="magazine">
+  <div class="magazine-head">
+    <h2>TOAST Magazine</h2>
+    <a href="#">All Articles</a>
+  </div>
+  <div class="magazine-grid">
+    <div class="mag-card">
+      <div class="thumb"></div>
+      <div class="tag">Style</div>
+      <h4>How to Layer Knitwear for Winter</h4>
+      <div class="date">4 days ago</div>
+    </div>
+    <div class="mag-card">
+      <div class="thumb"></div>
+      <div class="tag">Fashion</div>
+      <h4>The Dress Edit: Day to Evening</h4>
+      <div class="date">9 days ago</div>
+    </div>
+    <div class="mag-card">
+      <div class="thumb"></div>
+      <div class="tag">Making &amp; Craft</div>
+      <h4>Inside Our Cashmere: From Fibre to Finish</h4>
+      <div class="date">15 days ago</div>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="footer-grid">
     <div>
-      <h5>TeamSport Experiences</h5>
+      <h5>Help</h5>
       <ul>
-        <li><a href="#">Go Karting</a></li>
-        <li><a href="#">Combat Karts</a></li>
-        <li><a href="#">Mini Racers</a></li>
-        <li><a href="#">Bowling</a></li>
-        <li><a href="#">Laser Combat</a></li>
-        <li><a href="#">Mini Golf</a></li>
-        <li><a href="#">Sixes Social Cricket</a></li>
-        <li><a href="#">Membership</a></li>
-        <li><a href="#">Race Academy Lessons (8–15 yrs)</a></li>
-        <li><a href="#">Girls Karting Academy</a></li>
+        <li>Delivery &amp; Collection</li>
+        <li>Returns</li>
+        <li>Size &amp; Fit</li>
+        <li>Help With Ordering</li>
+        <li>Shop Locator</li>
+        <li>Contact Us</li>
       </ul>
     </div>
     <div>
-      <h5>Discover More</h5>
+      <h5>Our Approach</h5>
       <ul>
-        <li><a href="#">Food &amp; Drinks</a></li>
-        <li><a href="#">Gift Vouchers</a></li>
-        <li><a href="#">Parties and Events</a></li>
-        <li><a href="#">Corporate</a></li>
-        <li><a href="#">Kids Parties</a></li>
-        <li><a href="#">Stag &amp; Hen</a></li>
-        <li><a href="#">Offers</a></li>
-        <li><a href="#">Student Discount</a></li>
-        <li><a href="#">NHS &amp; Forces Discount</a></li>
+        <li>About Us</li>
+        <li>Social Conscience</li>
+        <li>Our Materials</li>
+        <li>Craftsmanship</li>
+        <li>Care Guide</li>
+        <li>New Makers</li>
       </ul>
     </div>
     <div>
-      <h5>Who We Are</h5>
+      <h5>Info</h5>
       <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">FAQs</a></li>
-        <li><a href="#">Charity</a></li>
-        <li><a href="#">Sustainability</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Newsletter Sign Up</a></li>
-        <li><a href="#">Press Contact</a></li>
+        <li>Ethical Policy</li>
+        <li>Modern Slavery Statement</li>
+        <li>GPSR Compliance</li>
+        <li>Work With Us</li>
       </ul>
     </div>
     <div>
-      <h5>Follow Us</h5>
+      <h5>Circle</h5>
       <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">TikTok</a></li>
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">X</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Tripadvisor</a></li>
-        <li><a href="#">Download the App</a></li>
+        <li>TOAST Reworn</li>
+        <li>TOAST Renewed</li>
+        <li>TOAST Exchange</li>
+        <li>TOAST Repair</li>
+        <li>Social Conscience Report</li>
       </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    Find Your Nearest Track › &nbsp;|&nbsp; Call us 01252 732300 or Contact Us<br>
-    Terms and Conditions | Privacy Policy | Cookie Policy<br>
-    © 2026 TeamSport (demo) — TeamSport Support Office (Staff Only), C1 Endeavour Place, Coxbridge Business Park, Alton Road, Farnham, Surrey GU10 5EH<br>
-    TeamSport is a trading name of Go Karting For Fun Ltd. Registered in England No. 05030696.
-  </div>
-</footer>
 
-<script>
-  const editBookingBtn = document.getElementById('editBookingBtn');
-  const editBookingModal = document.getElementById('editBookingModal');
-  const closeEditBookingBtn = document.getElementById('closeEditBookingBtn');
-  editBookingBtn.addEventListener('click', () => { editBookingModal.style.display = 'flex'; });
-  closeEditBookingBtn.addEventListener('click', () => { editBookingModal.style.display = 'none'; });
-  editBookingModal.addEventListener('click', (e) => { if (e.target === editBookingModal) editBookingModal.style.display = 'none'; });
-</script>
+  <div class="newsletter">
+    <h5>SIGN UP TO RECEIVE TOAST EMAILS</h5>
+    <p>Join our newsletter to hear about new collections, offers, events and editorial.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Email address">
+      <button type="button">Sign up</button>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2026 TOAST (demo) — simulated page for internal Puzzel use only</div>
+</footer>
 
 </body>
 </html>
